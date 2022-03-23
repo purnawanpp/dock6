@@ -45,7 +45,7 @@ footprint_similarity_score_secondary                         no
 pharmacophore_score_secondary                                no
 descriptor_score_secondary                                   no
 gbsa_zou_score_secondary                                     no
-gbsa_hawkins_score_secondary                                 no
+gbsa_hawkins_score_secondary                                 yes
 SASA_score_secondary                                         no
 amber_score_secondary                                        no
 minimize_ligand                                              yes
