@@ -1,0 +1,10 @@
+ density type = X
+ reading  2nnq_rec_noH.dms                                                                   type   R
+ # of atoms =   1014   # of surf pts =  12485
+ finding spheres for   2nnq_rec_noH.dms                                                                
+ dotlim =     0.000
+ radmax =    4.000
+ Minimum radius of acceptable spheres?
+   1.4000000
+ output to  2nnq_rec.sph                                                                    
+ clustering is complete     34  clusters
