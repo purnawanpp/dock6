@@ -39,9 +39,11 @@
 4.	Simpan dengan nama file: 2nnq_rec_noH.dms
 5.	Pastikan file 2nnq_rec_noH.dms ada dalam folder kerja
 6.	Buat File dengan Nama INSPH dengan cara klik kanan New Text Document.txt lalu rename menjadi INSPH dalam file INSPH berikan perintah berikut: 
-7.	Buka terminal Ubuntu pastikan terminal ubuntu telah membaca directory anda. Ketik Perintah Berikut pada Terminal: **sphgen -i INSPH -o OUTSPH**
-8.	Jika terjadi eror baca pesan eror tersebut dan hapus file yang exist
-9.	Di sini selanjutnya akan dipilih spheres yang merupakan kantong pengikat ligan, kita akan mencoba mengarahkan ligan ke tempat pengikatan ke reseptor. Untuk memilih mengatur sphres tersebut ketik perintah berikut pada terminal:**sphere_selector 2nnq_rec.sph 2nnq_lig_withH.mol2 10.0**
+7.	Buka terminal Ubuntu pastikan terminal ubuntu telah membaca directory anda. Ketik Perintah Berikut pada Terminal: 
+**sphgen -i INSPH -o OUTSPH**
+9.	Jika terjadi eror baca pesan eror tersebut dan hapus file yang exist
+10.	Di sini selanjutnya akan dipilih spheres yang merupakan kantong pengikat ligan, kita akan mencoba mengarahkan ligan ke tempat pengikatan ke reseptor. Untuk memilih mengatur sphres tersebut ketik perintah berikut pada terminal:
+**sphere_selector 2nnq_rec.sph 2nnq_lig_withH.mol2 10.0**
 
 **B.	Pembuatan Box**
 1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi showbox.in, dimana file tersebut berisi script:
