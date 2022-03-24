@@ -1,4 +1,6 @@
-# Tahap Simulasi Molecular Docking
+# Tutorial Simulasi Molecular Docking Menggunakan DOCK6
+<iframe width="560" height="315" src="https://www.youtube.com/embed/3y_uxZAhbqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 # Part 1 Preparasi Receptor dan Ligand Menggunakan Chimera
 **A.	Preparasi Receptor**
 1.	Semua file hasil simulasi dan script dapat didownload pada link berikut: https://github.com/purnawanpp/dock6_2nnq
@@ -38,7 +40,7 @@
 3.	Klik Tools -> Structure Editing -> Write DMS
 4.	Simpan dengan nama file: 2nnq_rec_noH.dms
 5.	Pastikan file 2nnq_rec_noH.dms ada dalam folder kerja
-6.	Buat File dengan Nama INSPH dengan cara klik kanan New Text Document.txt lalu rename menjadi INSPH dalam file INSPH berikan perintah berikut: 
+6.	Buat File dengan Nama INSPH https://github.com/purnawanpp/dock6_2nnq/blob/main/INSPH dengan cara klik kanan New Text Document.txt lalu rename menjadi INSPH dalam file INSPH berikan perintah berikut: 
 7.	Buka terminal Ubuntu pastikan terminal ubuntu telah membaca directory anda. Ketik Perintah Berikut pada Terminal: 
 **sphgen -i INSPH -o OUTSPH**
 9.	Jika terjadi eror baca pesan eror tersebut dan hapus file yang exist
