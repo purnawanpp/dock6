@@ -1,5 +1,5 @@
 # Tahap Simulasi Molecular Docking
-# Part 1 Preparasi Receptor dan Ligand
+# Part 1 Preparasi Receptor dan Ligand Menggunakan Chimera
 **A.	Preparasi Receptor**
 1.	Semua file hasil simulasi dan script dapat didownload pada link berikut: https://github.com/purnawanpp/dock6_2nnq
 2.	Baca artikel yang terkait dengan file Protein Data Bank (PDB) untuk memahami status protonasi, muatan, kondisi lingkungan, dan informasi penting lainnya mengenai reseptor dan ligan.
