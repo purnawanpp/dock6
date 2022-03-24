@@ -81,8 +81,8 @@ Sebelum melakukan docking, ligan akan mengalami minimisasi energi untuk menghila
 7.	Pilih “Dock4,5 or 6” klik OK
 8.	Untuk mengatur tampilan dapat mengklik column>show>Pilih yang ingin ditampilkan
 9.	Perhatikan semua pose 50 yang dihasilkan berada di cluster yang sama dan RMSD standar adalah 0,649. Nilai RMSD yang bagus adalah <2. Ini menunjukkan bahwa docking telah berhasil
-10.	Nilai terbaik yaitu nilai yang paling minimal 
- 
+10.	Nilai terbaik yaitu nilai yang paling minimal
+
 **G.	Flexible Docking dan perhitungan perhitungan Molecular Mechanics Generalized Born Surface Area (MM-GBSA)**
 1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi flex.in, dimana file tersebut berisi script:
 2.	Copy file 2nnq_rec_withH.mol2 lalu paste kembali di folder kerja, ubah nama file tersebut menjadi receptor.mol2
