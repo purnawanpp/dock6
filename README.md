@@ -1,5 +1,5 @@
 # Tahap Simulasi Molecular Docking
-# Part 1 Preparasai Receptor dan Ligand
+# Part 1 Preparasi Receptor dan Ligand
 **A.	Preparasi Receptor**
 1.	Semua file hasil simulasi dan script dapat didownload pada link berikut: https://github.com/purnawanpp/dock6_2nnq
 2.	Baca artikel yang terkait dengan file Protein Data Bank (PDB) untuk memahami status protonasi, muatan, kondisi lingkungan, dan informasi penting lainnya mengenai reseptor dan ligan.
@@ -16,7 +16,7 @@
 13.	Pilih sesuai pilihan diatas selanjutnya pada Assign Charges for Dock Prep Other Residue Pilih Gasteiger lalu centang Standard Residues, klik “OK”
 14.	Klik File Simpan sebagai file mol2. dengan nama (2nnq_rec_withH.mol2)
 
-**B.	Preparasi Ligand
+**B.	Preparasi Ligand**
 1.	Buka lagi file 2nnq.pdb
 2.	Klik file > open 2nnq
 3.	Klik Select> Residue pilih residu T4B
@@ -32,7 +32,7 @@
 13.	Klik file close session
  
 # Part 2: Preparasi Input File dan Simulasi Docking
-**A.	Pembuatan receptor surface and spheres (Bola Receptor)
+**A.	Pembuatan receptor surface and spheres (Bola Receptor)**
 1.	Buka file 2nnq_rec_noH.mol2 menggunakan chimera
 2.	Klik Action -> Surface -> Show
 3.	Klik Tools -> Structure Editing -> Write DMS
@@ -43,25 +43,25 @@
 8.	Jika terjadi eror baca pesan eror tersebut dan hapus file yang exist
 9.	Di sini selanjutnya akan dipilih spheres yang merupakan kantong pengikat ligan, kita akan mencoba mengarahkan ligan ke tempat pengikatan ke reseptor. Untuk memilih mengatur sphres tersebut ketik perintah berikut pada terminal:**sphere_selector 2nnq_rec.sph 2nnq_lig_withH.mol2 10.0**
 
-**B.	Pembuatan Box
+**B.	Pembuatan Box**
 1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi showbox.in, dimana file tersebut berisi script:
 2.	Arti script diatas adalah Kita akan membuat kotak dengan panjang persegi 8 Angstrom, Gunakan file selected_spheres di lokasi folder, nama file output pdb yang berisi kotak yang dihasilkan adalah 2nnq.box.pdb
 3.	Pada terminal ketikan perintah berikut: **showbox < showbox.in**
 4.	Jika langkah ini berhasil, Anda akan melihat file baru dengan nama 2nnq.box.pdb
 
-**C.	Pembuatan Grid
+**C.	Pembuatan Grid**
 1.	Pastikan file flex.defn, flex_drive.tbl, dan vdw_AMBER_parm99.defn ada dalam folder kerja, file tersebut dapat didownload pada link berikut: https://github.com/purnawanpp/dock6_2nnq
 2.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi grid.in, dimana file tersebut berisi script:
 3.	Pada terminal ketikan perintah berikut: **grid -i grid.in -o gridinfo.out**
 4.	Jika perintah berhasil, tiga file baru akan dihasilkan seperti (gridinfo.out, grid.nrg, grid.bmp). Buka file gridinfo.out untuk memastikan semua informasi tentang reseptor dalam file sesuai dengan informasi asli dari reseptor. (Misalnya: Total muatan, residu dan muatannya) Jika informasi tidak cocok, itu berarti Anda telah melakukan kesalahan pada salah satu langkah yang Anda ikuti sejauh ini.
 
-**D.	Minimisasi Energi
+**D.	Minimisasi Energi**
 Sebelum melakukan docking, ligan akan mengalami minimisasi energi untuk menghilangkan benturan atom yang tidak menguntungkan. Benturan ini akan mempengaruhi rigid docking karena pada rigid docking ligan akan ditambatkan sebagai ligan yang lengkap, sedangkan pada metode flexible docking dan fixed anchor docking ligan akan dipecah menjadi fragmen dan ligan akan dibangun perbagian dengan mempertimbangkan orientasi dan sudut putar.
 1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi min.in, dimana file tersebut berisi script:
 2.	Pada terminal ketikan perintah berikut: **dock6 -i min.in**
 3.	Jika prosesnya berhasil, file baru dengan nama 2nnq.lig.min_scored.mol2.
 
-**E. Simulasi Rigid Docking
+**E. Simulasi Rigid Docking**
 1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi rigid.in, dimana file tersebut berisi script:
 2.	Pada terminal ketikan perintah berikut: **dock6 -i rigid.in**
 3.	Setelah Simulasi Rigid Docking berhasil, file output baru yaitu rigid.out_scored.mol2 Visualisasikan file output ini menggunakan Chimera dengan mengikuti langkah-langkah untuk memeriksa keberhasilan proses docking
@@ -71,7 +71,7 @@ Sebelum melakukan docking, ligan akan mengalami minimisasi energi untuk menghila
 7.	Pilih “Dock4,5 or 6” klik OK
 8.	Untuk mengatur tampilan dapat mengklik column>show>Pilih yang ingin ditampilkan
 
-**F.	Fixed Anchor Docking
+**F.	Fixed Anchor Docking**
 1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi fixed.in, dimana file tersebut berisi script:
 2.	Pada terminal ketikan perintah berikut: **dock6 -i fixed.in**
 3.	Setelah docking selesai file output akan dihasilkan file berikut: 2nnq_fad_scored.mol2
@@ -83,7 +83,7 @@ Sebelum melakukan docking, ligan akan mengalami minimisasi energi untuk menghila
 9.	Perhatikan semua pose 50 yang dihasilkan berada di cluster yang sama dan RMSD standar adalah 0,649. Nilai RMSD yang bagus adalah <2. Ini menunjukkan bahwa docking telah berhasil
 10.	Nilai terbaik yaitu nilai yang paling minimal 
  
-**G.	Flexible Docking dan perhitungan perhitungan Molecular Mechanics Generalized Born Surface Area (MM-GBSA)
+**G.	Flexible Docking dan perhitungan perhitungan Molecular Mechanics Generalized Born Surface Area (MM-GBSA)**
 1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi flex.in, dimana file tersebut berisi script:
 2.	Copy file 2nnq_rec_withH.mol2 lalu paste kembali di folder kerja, ubah nama file tersebut menjadi receptor.mol2
 3.	Pada terminal ketikan perintah berikut: **dock6 -i flex.in**
