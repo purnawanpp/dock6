@@ -39,7 +39,7 @@ Video Tutorial Dapat dilihat disini: https://youtu.be/3y_uxZAhbqo
 3.	Klik Tools -> Structure Editing -> Write DMS
 4.	Simpan dengan nama file: 2nnq_rec_noH.dms
 5.	Pastikan file 2nnq_rec_noH.dms ada dalam folder kerja
-6.	Buat File dengan Nama INSPH https://github.com/purnawanpp/dock6_2nnq/blob/main/INSPH
+6.	Buat File dengan Nama *INSPH https://github.com/purnawanpp/dock6_2nnq/blob/main/INSPH
 7.	Buka terminal Ubuntu pastikan terminal ubuntu telah membaca directory anda. Ketik Perintah Berikut pada Terminal: 
 **sphgen -i INSPH -o OUTSPH**
 9.	Jika terjadi eror baca pesan eror tersebut dan hapus file yang exist
@@ -47,25 +47,25 @@ Video Tutorial Dapat dilihat disini: https://youtu.be/3y_uxZAhbqo
 **sphere_selector 2nnq_rec.sph 2nnq_lig_withH.mol2 10.0**
 
 **B.	Pembuatan Box**
-1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi showbox.in https://github.com/purnawanpp/dock6_2nnq/blob/main/showbox.in
+1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *showbox.in https://github.com/purnawanpp/dock6_2nnq/blob/main/showbox.in
 2.	Arti script diatas adalah Kita akan membuat kotak dengan panjang persegi 8 Angstrom, Gunakan file selected_spheres di lokasi folder, nama file output pdb yang berisi kotak yang dihasilkan adalah 2nnq.box.pdb
 3.	Pada terminal ketikan perintah berikut: **showbox < showbox.in**
 4.	Jika langkah ini berhasil, Anda akan melihat file baru dengan nama 2nnq.box.pdb
 
 **C.	Pembuatan Grid**
 1.	Pastikan file flex.defn, flex_drive.tbl, dan vdw_AMBER_parm99.defn ada dalam folder kerja, file tersebut dapat didownload pada link berikut: https://github.com/purnawanpp/dock6_2nnq
-2.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi grid.in https://github.com/purnawanpp/dock6_2nnq/blob/main/grid.in
+2.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *grid.in https://github.com/purnawanpp/dock6_2nnq/blob/main/grid.in
 3.	Pada terminal ketikan perintah berikut: **grid -i grid.in -o gridinfo.out**
 4.	Jika perintah berhasil, tiga file baru akan dihasilkan seperti (gridinfo.out, grid.nrg, grid.bmp). Buka file gridinfo.out untuk memastikan semua informasi tentang reseptor dalam file sesuai dengan informasi asli dari reseptor. (Misalnya: Total muatan, residu dan muatannya) Jika informasi tidak cocok, itu berarti Anda telah melakukan kesalahan pada salah satu langkah yang Anda ikuti sejauh ini.
 
 **D.	Minimisasi Energi**
-Sebelum melakukan docking, ligan akan mengalami minimisasi energi untuk menghilangkan benturan atom yang tidak menguntungkan. Benturan ini akan mempengaruhi rigid docking karena pada rigid docking ligan akan ditambatkan sebagai ligan yang lengkap, sedangkan pada metode flexible docking dan fixed anchor docking ligan akan dipecah menjadi fragmen dan ligan akan dibangun perbagian dengan mempertimbangkan orientasi dan sudut putar.
-1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi min.in https://github.com/purnawanpp/dock6_2nnq/blob/main/min.in
-2.	Pada terminal ketikan perintah berikut: **dock6 -i min.in**
-3.	Jika prosesnya berhasil, file baru dengan nama 2nnq.lig.min_scored.mol2.
+1. Sebelum melakukan docking, ligan akan mengalami minimisasi energi untuk menghilangkan benturan atom yang tidak menguntungkan. Benturan ini akan mempengaruhi rigid docking karena pada rigid docking ligan akan ditambatkan sebagai ligan yang lengkap, sedangkan pada metode flexible docking dan fixed anchor docking ligan akan dipecah menjadi fragmen dan ligan akan dibangun perbagian dengan mempertimbangkan orientasi dan sudut putar.
+2. Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi min.in https://github.com/purnawanpp/dock6_2nnq/blob/main/min.in
+3.	Pada terminal ketikan perintah berikut: **dock6 -i min.in**
+4.	Jika prosesnya berhasil, file baru dengan nama 2nnq.lig.min_scored.mol2.
 
 **E. Simulasi Rigid Docking**
-1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi rigid.in https://github.com/purnawanpp/dock6_2nnq/blob/main/rigid.in
+1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *rigid.in https://github.com/purnawanpp/dock6_2nnq/blob/main/rigid.in
 2.	Pada terminal ketikan perintah berikut: **dock6 -i rigid.in**
 3.	Setelah Simulasi Rigid Docking berhasil, file output baru yaitu rigid.out_scored.mol2 Visualisasikan file output ini menggunakan Chimera dengan mengikuti langkah-langkah untuk memeriksa keberhasilan proses docking
 4.	Klik File> open -> 2nnq_rec_withH.mol2 File 
@@ -75,7 +75,7 @@ Sebelum melakukan docking, ligan akan mengalami minimisasi energi untuk menghila
 8.	Untuk mengatur tampilan dapat mengklik column>show>Pilih yang ingin ditampilkan
 
 **F.	Fixed Anchor Docking**
-1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi fixed.in https://github.com/purnawanpp/dock6_2nnq/blob/main/fixed.in
+1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *fixed.in https://github.com/purnawanpp/dock6_2nnq/blob/main/fixed.in
 2.	Pada terminal ketikan perintah berikut: **dock6 -i fixed.in**
 3.	Setelah docking selesai file output akan dihasilkan file berikut: 2nnq_fad_scored.mol2
 4.	Klik File> open -> 2nnq_rec_withH.mol2 File 
@@ -87,7 +87,7 @@ Sebelum melakukan docking, ligan akan mengalami minimisasi energi untuk menghila
 10.	Nilai terbaik yaitu nilai yang paling minimal
 
 **G.	Flexible Docking dan perhitungan perhitungan Molecular Mechanics Generalized Born Surface Area (MM-GBSA)**
-1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi flex.in https://github.com/purnawanpp/dock6_2nnq/blob/main/flex.in
+1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *flex.in https://github.com/purnawanpp/dock6_2nnq/blob/main/flex.in
 2.	Copy file 2nnq_rec_withH.mol2 lalu paste kembali di folder kerja, ubah nama file tersebut menjadi receptor.mol2
 3.	Pada terminal ketikan perintah berikut: **dock6 -i flex.in**
 4.	Ketikan perintah masing-masing sesuai dalam kurung secara manual [    ] pada terminal lalu enter. 
