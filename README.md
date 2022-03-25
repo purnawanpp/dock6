@@ -1,5 +1,8 @@
 # Tutorial Simulasi Molecular Docking Menggunakan DOCK6
-Video Tutorial Dapat dilihat disini: https://youtu.be/3y_uxZAhbqo
+Video Tutorial Dapat dilihat disini: 
+1. Part 1: https://www.youtube.com/watch?v=m4ZI-UUwoyk
+2. Part 2: https://youtu.be/3y_uxZAhbqo
+
 # Part 1 Preparasi Receptor dan Ligand Menggunakan Chimera
 **A.	Preparasi Receptor**
 1.	Semua file hasil simulasi dan script dapat didownload pada link berikut: https://github.com/purnawanpp/dock6_2nnq
