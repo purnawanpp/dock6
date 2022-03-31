@@ -1,6 +1,6 @@
 # Tutorial Simulasi Molecular Docking Menggunakan DOCK6
 Video Tutorial Dapat dilihat disini: 
-1. Part 1: https://www.youtube.com/watch?v=m4ZI-UUwoyk
+1. Part 1: https://youtu.be/m4ZI-UUwoyk
 2. Part 2: https://youtu.be/3y_uxZAhbqo
 3. Part 3: https://youtu.be/uVfeQY0hYis
 
