@@ -2,6 +2,7 @@
 Video Tutorial Dapat dilihat disini: 
 1. Part 1: https://www.youtube.com/watch?v=m4ZI-UUwoyk
 2. Part 2: https://youtu.be/3y_uxZAhbqo
+3. Part 3: https://youtu.be/uVfeQY0hYis
 
 # Part 1 Preparasi Receptor dan Ligand Menggunakan Chimera
 **A.	Preparasi Receptor**
