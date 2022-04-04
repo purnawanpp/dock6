@@ -99,3 +99,5 @@ Video Tutorial Dapat dilihat disini:
 5.	Hasil simulasi berikut dibawah ini, nilai Docking/Grid score yaitu -57.144726: 
 6.	Nilai keseluruhan GBSA yaitu GBSA Score -38.356567, nilai GBSA Energy Van der walls -53.421894, Energi elektrostatik -96.454689, Energy Generalized Born yaitu 118.059814 dan energy surface area yaitu -6.539795
 
+# Daftar Pustaka
+1. https://ringo.ams.stonybrook.edu/index.php/2018_DOCK_tutorial_1_with_PDBID_2NNQ#VI._Virtual_Screen
