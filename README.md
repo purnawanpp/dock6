@@ -16,7 +16,7 @@ Video Tutorial Dapat dilihat disini:
 7.	Simpan reseptor sebagai 2nnq_receptor.pdb klik file>save pdb> Pilih lokasi selanjutnya save pdb.
 8.	Selanjutnya simpan lagi file, Simpan reseptor sebagai file mol2. Simpan dengan nama 2nnq_rec_noH.mol2
 9.	Klik File Close Session Buka kembali file 2nnq_rec_noH.mol2 menggunakan Chimera dan gunakan instruksi berikut untuk menyiapkan file reseptor yang akan digunakan di DOCK.
-10.	Klik Tools -> Structure Editing> Klik Dock Prep -> Secara otomatis akan ditambahkan Tambahkan H (Untuk menambahkan atom Hidrogen) dan muatan (Untuk menambahkan muatan, gunakan medan gaya AMBER terbaru untuk residu standar. Di tutorial kali ini menggunakan menggunakan AMBER ff14SB)
+10.	Klik Tools -> Structure Editing> Klik Dock Prep -> Secara otomatis akan ditambahkan Tambahkan H (Untuk menambahkan atom Hidrogen) dan muatan (Untuk menambahkan muatan, gunakan medan gaya AMBER terbaru untuk residu non standar
 11.	Pada Dock Prep Langsung klik “Ok” Selanjutnya 
 12.	Pada Add Hydrogen langsung klik “Ok”
 13.	Pilih sesuai pilihan diatas selanjutnya pada Assign Charges for Dock Prep Other Residue Pilih Gasteiger lalu centang Standard Residues, klik “OK”
