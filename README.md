@@ -106,7 +106,7 @@ Video Tutorial Dapat dilihat disini:
 
 **I. Simulasi Docking dengan Senyawa Hasil Virtual Screening atau bahan alam**
 1. Copy folder kerja sebelumnya dan paste di tempat yang sama, beri nama folder tersebut sesuai kebutuhan
-2. Gambar Struktur molekul terlebih dahulu menggunakan Marvin Sketch, contoh struktur yang digambar adalah _1-[3'-(carboxymethoxy)-5'-methyl-[1,1'-bi(cyclohexane)]-2-yl]-3,4-dicyclohexyl-5-ethyl-4H-1λ⁵-pyrazol-1-yliu_m tulisan struktur ini dapat di copy pada notepad dan dipaste langsung pada software marvin sketch
+2. Gambar Struktur molekul terlebih dahulu menggunakan Marvin Sketch, contoh struktur yang digambar adalah **1-[3'-(carboxymethoxy)-5'-methyl-[1,1'-bi(cyclohexane)]-2-yl]-3,4-dicyclohexyl-5-ethyl-4H-1λ⁵-pyrazol-1-ylium** tulisan struktur ini dapat di copy pada notepad dan dipaste langsung pada software marvin sketch
 3. Simpan file struktur tersebut dengan format file mol2 dengan nama file: contoh.pdb timpa file tersebut, klik yes atau ok
 4. Struktur juga dapat digambar secara manual
 5. Jalankan perangkat lunak Gnina untuk memperoleh ligan dengan Koordinat X,Y dan Z
