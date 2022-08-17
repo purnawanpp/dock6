@@ -118,7 +118,7 @@ Video Tutorial Dapat dilihat disini:
 8. Jalankan perintah berikut untuk merubah format file: 
 **obabel docked.sdf -O docked.pdbqt**
 9. Selanjutnya extract file tersebut menggunakan vina_split dengan perintah:
-vina_split --input docked.pdbqt 
+**vina_split --input docked.pdbqt**
 10.	Selanjutnya nanti akan diperoleh file dengan nama docked_ligand_1.pdbqt selanjutnya ubah nama dan format file tersebut dengan format mol2 dengan perintah:
 **obabel docked_ligand_1.pdbqt -O 2nnq_lig_withH.mol2**
 11.	Buka file  2nnq_lig_withH.mol2 menggunakan Avogadro
