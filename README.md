@@ -28,7 +28,7 @@ Video Tutorial Dapat dilihat disini:
 4.	Klik Select> Klik Invert (Selected models)
 5.	Klik Actions>atom/Bonds>delete
 6.	Klik Tools> Structure Editing >Klik Dock Prep
-7.	Klik Tools -> Structure Editing> Klik Dock Prep -> Secara otomatis akan ditambahkan Tambahkan H (Untuk menambahkan atom Hidrogen) dan muatan (Untuk menambahkan muatan, gunakan medan gaya AMBER terbaru untuk residu standar. Di tutorial kali ini menggunakan menggunakan AMBER ff14SB)
+7.	Klik Tools -> Structure Editing> Klik Dock Prep -> Secara otomatis akan ditambahkan Tambahkan H (Untuk menambahkan atom Hidrogen) dan muatan (Untuk menambahkan muatan, gunakan medan gaya AMBER terbaru untuk residu standar. Di tutorial kali ini menggunakan menggunakan General Amber Force Field (GAFF)
 8.	Pada Dock Prep Langsung klik “Ok” Selanjutnya 
 9.	Pada Add Hydrogen langsung klik “Ok”
 10.	Pada bagian label jangan dicentang
@@ -97,6 +97,32 @@ Video Tutorial Dapat dilihat disini:
 4.	Ketikan perintah masing-masing sesuai dalam kurung secara manual [    ] pada terminal lalu enter. 
 5.	Hasil simulasi berikut dibawah ini, nilai Docking/Grid score yaitu -57.144726: 
 6.	Nilai keseluruhan GBSA yaitu GBSA Score -38.356567, nilai GBSA Energy Van der walls -53.421894, Energi elektrostatik -96.454689, Energy Generalized Born yaitu 118.059814 dan energy surface area yaitu -6.539795
+
+**H. Simulasi Docking dengan Senyawa Hasil Virtual Screening atau bahan alam**
+1. Copy folder kerja sebelumnya dan paste di tempat yang sama, beri nama folder tersebut sesuai kebutuhan
+2. Gambar Struktur molekul terlebih dahulu menggunakan Marvin Sketch, contoh struktur yang digambar adalah 1-(2,4,6-Triisopropylphenylsulfonyl)-1H-benzo[d]imidazole tulisan struktur ini dapat di copy pada notepad dan dipaste langsung pada software marvin sketch
+3. Simpan file struktur tersebut dengan format file mol2 dengan nama file: contoh.pdb timpa file tersebut, klik yes atau ok
+4. Struktur juga dapat digambar secara manual
+5. Jalankan perangkat lunak Gnina untuk memperoleh ligan dengan Koordinat X,Y dan Z
+6. Pisahkan protein dan ligand dengan perintah di terminal linux satu persatu:
+**grep ATOM 2nnq.pdb > rec.pdb**
+**grep T4B 2nnq.pdb > lig.pdb**
+7. Jalankan perintah berikut dalam satu baris terminal:
+**gnina -r rec.pdb -l contoh.pdb --autobox_ligand lig.pdb -o docked.sdf --seed 0 > hasil.txt**
+8. Jalankan perintah berikut untuk merubah format file: 
+**obabel docked.sdf -O docked.pdbqt**
+9. Selanjutnya extract file tersebut menggunakan vina_split dengan perintah:
+vina_split --input docked.pdbqt 
+10.	Selanjutnya nanti akan diperoleh file dengan nama docked_ligand_1.pdbqt selanjutnya ubah nama dan format file tersebut dengan format mol2 dengan perintah:
+**obabel docked_ligand_1.pdbqt -O 2nnq_lig_withH.mol2**
+11.	Buka file  2nnq_lig_withH.mol2 menggunakan Avogadro
+12.	Lakukan optimasi geometri dengan menggunakan Avogadro
+13.	Klik File, cari folder kerja, buka file 2nnq_lig_withH.mol2
+14.	Tambahkan hidrogen dengan cara Build, add Hydrogen
+15.	Lakukan optimasi geometri dengan avogadro dengan cara klik Extensions, Molecular Mechanics, Setup Force Field, pilih GAFF (General Amber Force Field)
+16.	Selanjutnya klik Extensions, klik optimize geometry
+17.	Klik file selanjutnya save as, pastikan format filenya adalah .mol2 dan timpa file sebelumnya atau bisa langsung klik save
+18. Proses docking dilakukan sama pada step # Part 2: Preparasi Input File dan Simulasi Docking pada poin 10 sampai dilakukan pembuatan Box, Grid, Minimisasi, Rigid docking dan Flexible docking
 
 # Daftar Pustaka
 1. https://ringo.ams.stonybrook.edu/index.php/2018_DOCK_tutorial_1_with_PDBID_2NNQ#VI._Virtual_Screen
