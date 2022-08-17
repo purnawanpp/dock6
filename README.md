@@ -98,7 +98,13 @@ Video Tutorial Dapat dilihat disini:
 5.	Hasil simulasi berikut dibawah ini, nilai Docking/Grid score yaitu -57.144726: 
 6.	Nilai keseluruhan GBSA yaitu GBSA Score -38.356567, nilai GBSA Energy Van der walls -53.421894, Energi elektrostatik -96.454689, Energy Generalized Born yaitu 118.059814 dan energy surface area yaitu -6.539795
 
-**H. Simulasi Docking dengan Senyawa Hasil Virtual Screening atau bahan alam**
+**H. Penginstalan software untuk Docking hasil Virtual Screening atau bahan alam**
+1. Instalasi Gnina dengan cara download Perangkat lunak pada link berikut: https://github.com/gnina/gnina/releases/download/v1.0.2/gnina
+2. Instalasi open babel dengan perintah diterminal linux: **sudo apt-get install -y openbabel**
+3. Instalasi vina_split dengan cara download file instalasi pada link berikut:https://drive.google.com/file/d/1hJY_7beI822AbVzDJJoel-M7UT-DOINS/view?usp=sharing untuk versi linux dan versi windows pada link berikut: https://drive.google.com/file/d/1yxwaD6hYJ3CVtZ1hc_uYVpdwKTTlRRC2/view?usp=sharing
+4. Buatkan path file gnina dan vina_split agar bisa diakses diterminal linux untuk gnina dan terminal windows untuk vina_split
+
+**I. Simulasi Docking dengan Senyawa Hasil Virtual Screening atau bahan alam**
 1. Copy folder kerja sebelumnya dan paste di tempat yang sama, beri nama folder tersebut sesuai kebutuhan
 2. Gambar Struktur molekul terlebih dahulu menggunakan Marvin Sketch, contoh struktur yang digambar adalah 1-(2,4,6-Triisopropylphenylsulfonyl)-1H-benzo[d]imidazole tulisan struktur ini dapat di copy pada notepad dan dipaste langsung pada software marvin sketch
 3. Simpan file struktur tersebut dengan format file mol2 dengan nama file: contoh.pdb timpa file tersebut, klik yes atau ok
