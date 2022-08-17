@@ -111,7 +111,7 @@ Video Tutorial Dapat dilihat disini:
 4. Struktur juga dapat digambar secara manual
 5. Jalankan perangkat lunak Gnina untuk memperoleh ligan dengan Koordinat X,Y dan Z
 6. Pisahkan protein dan ligand dengan perintah di terminal linux satu persatu:
-**grep ATOM 2nnq.pdb > rec.pdb**
+**grep ATOM 2nnq.pdb > rec.pdb** selanjutnya
 **grep T4B 2nnq.pdb > lig.pdb**
 7. Jalankan perintah berikut dalam satu baris terminal:
 **gnina -r rec.pdb -l contoh.pdb --autobox_ligand lig.pdb -o docked.sdf --seed 0 > hasil.txt**
