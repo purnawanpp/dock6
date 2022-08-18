@@ -48,7 +48,7 @@ Video Tutorial Dapat dilihat disini:
 **sphgen -i INSPH -o OUTSPH**
 9.	Jika terjadi eror baca pesan eror tersebut dan hapus file yang exist
 10.	Di sini selanjutnya akan dipilih spheres yang merupakan kantong pengikat ligan, kita akan mencoba mengarahkan ligan ke tempat pengikatan ke reseptor. Untuk memilih mengatur sphres tersebut ketik perintah berikut pada terminal:
-**sphere_selector 2nnq_rec.sph 2nnq_lig_withH.mol2 5.0**
+**sphere_selector 2nnq_rec.sph 2nnq_lig_withH.mol2 10.0**
 
 **B.	Pembuatan Box**
 1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *showbox.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/showbox.in
