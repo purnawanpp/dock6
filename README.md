@@ -128,7 +128,7 @@ Video Tutorial Dapat dilihat disini:
 15.	Lakukan optimasi geometri dengan avogadro dengan cara klik Extensions, Molecular Mechanics, Setup Force Field, pilih GAFF (General Amber Force Field)
 16.	Selanjutnya klik Extensions, klik optimize geometry
 17.	Klik file selanjutnya save as, pastikan format filenya adalah .mol2 dan timpa file sebelumnya atau bisa langsung klik save
-18. Proses docking dilakukan sama pada step # Part 2: Preparasi Input File dan Simulasi Docking pada Part A poin 9 sampai dilakukan pembuatan Box, Grid, Minimisasi, Rigid docking dan Flexible docking
+18. Proses docking dilakukan sama pada step # Part 2: Preparasi Input File dan Simulasi Docking pada Bagian A poin 9 sampai dilakukan pembuatan Box, Grid, Minimisasi, Rigid docking dan Flexible docking
 
 # Daftar Pustaka
 1. https://ringo.ams.stonybrook.edu/index.php/2018_DOCK_tutorial_1_with_PDBID_2NNQ#VI._Virtual_Screen
