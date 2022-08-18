@@ -100,9 +100,9 @@ Video Tutorial Dapat dilihat disini:
 
 **H. Penginstalan software untuk Docking hasil Virtual Screening atau bahan alam**
 1. Instalasi Gnina dengan cara download Perangkat lunak pada link berikut: https://github.com/gnina/gnina/releases/download/v1.0.2/gnina
-2. Instalasi open babel dengan perintah diterminal linux: **sudo apt-get install -y openbabel**
-3. Instalasi vina_split dengan perintah di terminal: **sudo apt-get install -y autodock-vina**
-4. Buatkan path file gnina
+2. Instalasi open babel dengan perintah di terminal linux: **sudo apt-get install -y openbabel**
+3. Instalasi vina_split dengan perintah di terminal linux: **sudo apt-get install -y autodock-vina**
+4. Buatkan path file gnina pada terminal linux
 
 **I. Simulasi Docking dengan Senyawa Hasil Virtual Screening atau bahan alam**
 1. Copy folder kerja sebelumnya dan paste di tempat yang sama, beri nama folder tersebut sesuai kebutuhan
