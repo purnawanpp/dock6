@@ -110,7 +110,7 @@ Video Tutorial Dapat dilihat disini:
 3. Simpan file struktur tersebut dengan format file .pdb dengan nama file: *contoh.pdb* klik yes atau ok
 4. Struktur juga dapat digambar secara manual
 5. Jalankan perangkat lunak Gnina untuk memperoleh ligan dengan Koordinat X,Y dan Z
-6. Pisahkan protein dan ligand dengan perintah di terminal linux satu persatu:
+6. Download PDB 2nnq di sini https://files.rcsb.org/download/2NNQ.pdb dan Pisahkan protein dan ligand dengan perintah di terminal linux satu persatu:
 **grep ATOM 2nnq.pdb > rec.pdb** selanjutnya
 **grep T4B 2nnq.pdb > lig.pdb**
 7. Jalankan perintah berikut dalam satu baris terminal:
