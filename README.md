@@ -114,7 +114,7 @@ Video Tutorial Dapat dilihat disini:
 **grep ATOM 2nnq.pdb > rec.pdb** selanjutnya
 **grep T4B 2nnq.pdb > lig.pdb**
 7. Jalankan perintah berikut dalam satu baris terminal:
-**gnina -r rec.pdb -l contoh.pdb --autobox_ligand lig.pdb -o docked.sdf --seed 0 > hasil.txt**
+**gnina -r rec.pdb -l contoh.pdb --autobox_ligand lig.pdb -o docked.sdf --seed 0**
 8. Jalankan perintah berikut untuk merubah format file: 
 **obabel docked.sdf -O docked.pdbqt**
 9. Selanjutnya extract file tersebut menggunakan vina_split dengan perintah:
