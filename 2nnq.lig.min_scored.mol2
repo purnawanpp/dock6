@@ -6,10 +6,10 @@
 ##########                            HA_RMSDs:              0.1367
 ##########                            HA_RMSDh:              0.1367
 ##########                            HA_RMSDm:              0.1367
-##########                          Grid_Score:          -55.357105
-##########                     Grid_vdw_energy:          -45.041122
-##########                      Grid_es_energy:          -10.315982
-##########           Internal_energy_repulsive:           15.047776
+##########                          Grid_Score:          -55.357094
+##########                     Grid_vdw_energy:          -45.041107
+##########                      Grid_es_energy:          -10.315986
+##########           Internal_energy_repulsive:           15.047760
 
 @<TRIPOS>MOLECULE
 2nnq
