@@ -134,7 +134,7 @@ Video Tutorial Dapat dilihat disini:
 1. Download file footprint.in https://github.com/purnawanpp/dock6_2nnq/blob/main/footprint.in dan plot.py https://github.com/purnawanpp/dock6_2nnq/blob/main/plot.py dan simpan di folder kerja
 2. Jalankan perintah berikut: **dock6 -i footprint.in**
 3. Selanjutnya jalankan perintah berikut: **python plot.py fps.min.output_footprint_scored.txt 50**
-4. Akan diperoleh file berupa: fps.min.output_footprint_scored.txt.pdf
+4. Akan diperoleh file berupa file: https://github.com/purnawanpp/dock6_2nnq/blob/main/fps.min.output_footprint_scored.txt.pdf 
 
 # Daftar Pustaka
 1. https://ringo.ams.stonybrook.edu/index.php/2018_DOCK_tutorial_1_with_PDBID_2NNQ#VI._Virtual_Screen
