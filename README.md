@@ -130,5 +130,10 @@ Video Tutorial Dapat dilihat disini:
 17.	Klik file selanjutnya save as, pastikan format filenya adalah .mol2 dan timpa file sebelumnya atau bisa langsung klik save
 18. Proses docking dilakukan sama pada step # Part 2: Preparasi Input File dan Simulasi Docking pada Bagian A poin 9 sampai dilakukan pembuatan Box, Grid, Minimisasi, Rigid docking dan Flexible docking
 
+** Analisis Footprint
+1. Download file footprint.in dan plot.py dan simpan di folder kerja
+2. Jalankan perintah berikut: **dock6 -i footprint.in**
+3. Selanjutnya jalankan perintah berikut: **python plot.py fps.min.output_footprint_scored.txt 50**
+
 # Daftar Pustaka
 1. https://ringo.ams.stonybrook.edu/index.php/2018_DOCK_tutorial_1_with_PDBID_2NNQ#VI._Virtual_Screen
