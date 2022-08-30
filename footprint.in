@@ -26,7 +26,7 @@ fps_score_footprint_reference_mol2_filename                  2nnq_lig_withH.mol2
 fps_score_foot_compare_type                                  Euclidean
 fps_score_normalize_foot                                     yes
 fps_score_foot_comp_all_residue                              yes
-fps_score_receptor_filename                                  rec.mol2
+fps_score_receptor_filename                                  2nnq_rec_noH.mol2
 fps_score_vdw_att_exp                                        6
 fps_score_vdw_rep_exp                                        12
 fps_score_vdw_rep_rad_scale                                  1
