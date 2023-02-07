@@ -15,3 +15,4 @@ receptor_file                             2nnq_rec_withH.mol2
 box_file                                  2nnq.box.pdb
 vdw_definition_file                       vdw_AMBER_parm99.defn
 score_grid_prefix                         grid
+allow_non_integral_charges     		        no
