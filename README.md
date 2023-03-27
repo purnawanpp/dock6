@@ -138,5 +138,8 @@ Video Tutorial Dapat dilihat disini:
 4. Akan diperoleh file berupa file: https://github.com/purnawanpp/dock6_2nnq/blob/main/fps.min.output_footprint_scored.txt.pdf 
 5. Hasil akan berbeda jika menggunakan footprint hasil flexibledocking
 
+## Catatan
+Tutorial ini cocok untuk versi DOCK6.9, banyak update pada DOCK6.10 terutama perhitugan GBSA yang hanya bisa dalam keadaan rigid. Contoh script perhitungan GBSA pada DOCK6.10 dapat dibaca disini: https://github.com/purnawanpp/dock6_2nnq/blob/main/hawkins_gbsa1.dockin
+
 # Daftar Pustaka
 1. https://ringo.ams.stonybrook.edu/index.php/2018_DOCK_tutorial_1_with_PDBID_2NNQ#VI._Virtual_Screen
