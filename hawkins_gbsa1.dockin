@@ -1,6 +1,6 @@
 conformer_search_type                                        rigid
 use_internal_energy                                          no
-ligand_atom_file                                             lig.mol2
+ligand_atom_file                                             2nnq.lig.min_scored.mol2
 limit_max_ligands                                            no
 skip_molecule                                                no
 read_mol_solvation                                           no
@@ -21,7 +21,7 @@ internal_energy_score_primary                                no
 descriptor_score_primary                                     no
 gbsa_zou_score_primary                                       no
 gbsa_hawkins_score_primary                                   yes
-gbsa_hawkins_score_rec_filename                              rec.mol2
+gbsa_hawkins_score_rec_filename                              receptor.mol2
 gbsa_hawkins_score_solvent_dielectric                        78.5
 gbsa_hawkins_use_salt_screen                                 no
 gbsa_hawkins_score_gb_offset                                 0.09
@@ -31,9 +31,9 @@ gbsa_hawkins_score_vdw_rep_exp                               12
 grid_score_rep_rad_scale                                     1
 minimize_ligand                                              no
 atom_model                                                   all
-vdw_defn_file                                                ../../../parameters/vdw_AMBER_parm99.defn
-flex_defn_file                                               ../../../parameters/flex.defn
-flex_drive_file                                              ../../../parameters/flex_drive.tbl
+vdw_defn_file                                                vdw_AMBER_parm99.defn
+flex_defn_file                                               flex.defn
+flex_drive_file                                              flex_drive.tbl
 ligand_outfile_prefix                                        hawkins_gbsa1
 write_orientations                                           no
 num_scored_conformers                                        1
