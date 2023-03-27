@@ -45,32 +45,32 @@ Video Tutorial Dapat dilihat disini:
 5.	Pastikan file 2nnq_rec_noH.dms ada dalam folder kerja
 6.	Buat File dengan Nama *INSPH* https://github.com/purnawanpp/dock6_2nnq/blob/main/INSPH
 7.	Buka terminal Ubuntu pastikan terminal ubuntu telah membaca directory anda. Ketik Perintah Berikut pada Terminal: 
-**sphgen -i INSPH -o OUTSPH**
+`sphgen -i INSPH -o OUTSPH`
 9.	Jika terjadi eror baca pesan eror tersebut dan hapus file yang exist
 10.	Di sini selanjutnya akan dipilih spheres yang merupakan kantong pengikat ligan, kita akan mencoba mengarahkan ligan ke tempat pengikatan ke reseptor. Untuk memilih mengatur sphres tersebut ketik perintah berikut pada terminal:
-**sphere_selector 2nnq_rec.sph 2nnq_lig_withH.mol2 10.0**
+`sphere_selector 2nnq_rec.sph 2nnq_lig_withH.mol2 10.0`
 
 **B.	Pembuatan Box**
 1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *showbox.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/showbox.in
 2.	Arti script diatas adalah Kita akan membuat kotak dengan panjang persegi 8 Angstrom, Gunakan file selected_spheres di lokasi folder, nama file output pdb yang berisi kotak yang dihasilkan adalah 2nnq.box.pdb
-3.	Pada terminal ketikan perintah berikut: **showbox < showbox.in**
+3.	Pada terminal ketikan perintah berikut: `showbox < showbox.in`
 4.	Jika langkah ini berhasil, Anda akan melihat file baru dengan nama 2nnq.box.pdb
 
 **C.	Pembuatan Grid**
 1.	Pastikan file flex.defn, flex_drive.tbl, dan vdw_AMBER_parm99.defn ada dalam folder kerja, file tersebut dapat didownload pada link berikut: https://github.com/purnawanpp/dock6_2nnq
 2.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *grid.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/grid.in
-3.	Pada terminal ketikan perintah berikut: **grid -i grid.in -o gridinfo.out**
+3.	Pada terminal ketikan perintah berikut: `grid -i grid.in -o gridinfo.out`
 4.	Jika perintah berhasil, tiga file baru akan dihasilkan seperti (gridinfo.out, grid.nrg, grid.bmp). Buka file gridinfo.out untuk memastikan semua informasi tentang reseptor dalam file sesuai dengan informasi asli dari reseptor. (Misalnya: Total muatan, residu dan muatannya) Jika informasi tidak cocok, itu berarti Anda telah melakukan kesalahan pada salah satu langkah yang Anda ikuti sejauh ini.
 
 **D.	Minimisasi Energi**
 1. Sebelum melakukan docking, ligan akan mengalami minimisasi energi untuk menghilangkan benturan atom yang tidak menguntungkan. Benturan ini akan mempengaruhi rigid docking karena pada rigid docking ligan akan ditambatkan sebagai ligan yang lengkap, sedangkan pada metode flexible docking dan fixed anchor docking ligan akan dipecah menjadi fragmen dan ligan akan dibangun perbagian dengan mempertimbangkan orientasi dan sudut putar.
 2. Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *min.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/min.in
-3.	Pada terminal ketikan perintah berikut: **dock6 -i min.in**
+3.	Pada terminal ketikan perintah berikut: `dock6 -i min.in`
 4.	Jika prosesnya berhasil, file baru dengan nama 2nnq.lig.min_scored.mol2.
 
 **E. Simulasi Rigid Docking**
 1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *rigid.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/rigid.in
-2.	Pada terminal ketikan perintah berikut: **dock6 -i rigid.in**
+2.	Pada terminal ketikan perintah berikut: `dock6 -i rigid.in`
 3.	Setelah Simulasi Rigid Docking berhasil, file output baru yaitu rigid.out_scored.mol2 Visualisasikan file output ini menggunakan Chimera dengan mengikuti langkah-langkah untuk memeriksa keberhasilan proses docking
 4.	Klik File> open -> 2nnq_rec_withH.mol2 File 
 5.	Klik open -> 2nnq_lig_withH.mol2
@@ -80,7 +80,7 @@ Video Tutorial Dapat dilihat disini:
 
 **F.	Fixed Anchor Docking**
 1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *fixed.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/fixed.in
-2.	Pada terminal ketikan perintah berikut: **dock6 -i fixed.in**
+2.	Pada terminal ketikan perintah berikut: `dock6 -i fixed.in`
 3.	Setelah docking selesai file output akan dihasilkan file berikut: 2nnq_fad_scored.mol2
 4.	Klik File> open -> 2nnq_rec_withH.mol2 File 
 5.	Klik open -> 2nnq_lig_withH.mol2
@@ -93,15 +93,15 @@ Video Tutorial Dapat dilihat disini:
 **G.	Flexible Docking dan perhitungan perhitungan Molecular Mechanics Generalized Born Surface Area (MM-GBSA)**
 1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *flex.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/flex.in
 2.	Copy file 2nnq_rec_withH.mol2 lalu paste kembali di folder kerja, ubah nama file tersebut menjadi receptor.mol2
-3.	Pada terminal ketikan perintah berikut: **dock6 -i flex.in**
+3.	Pada terminal ketikan perintah berikut: `dock6 -i flex.in`
 4.	Ketikan perintah masing-masing sesuai dalam kurung secara manual [    ] pada terminal lalu enter. 
 5.	Hasil simulasi berikut dibawah ini, nilai Docking/Grid score yaitu -57.144726: 
 6.	Nilai keseluruhan GBSA yaitu GBSA Score -38.356567, nilai GBSA Energy Van der walls -53.421894, Energi elektrostatik -96.454689, Energy Generalized Born yaitu 118.059814 dan energy surface area yaitu -6.539795
 
 **H. Penginstalan software untuk Docking hasil Virtual Screening atau bahan alam**
 1. Instalasi Gnina dengan cara download Perangkat lunak pada link berikut: https://github.com/gnina/gnina/releases/download/v1.0.2/gnina
-2. Instalasi open babel dengan perintah di terminal linux: **sudo apt-get install -y openbabel**
-3. Instalasi vina_split dengan perintah di terminal linux: **sudo apt-get install -y autodock-vina**
+2. Instalasi open babel dengan perintah di terminal linux: `sudo apt-get install -y openbabel`
+3. Instalasi vina_split dengan perintah di terminal linux: `sudo apt-get install -y autodock-vina`
 4. Buatkan path file gnina pada terminal linux
 
 **I. Simulasi Docking dengan Senyawa Hasil Virtual Screening atau bahan alam**
@@ -111,16 +111,16 @@ Video Tutorial Dapat dilihat disini:
 4. Struktur juga dapat digambar secara manual
 5. Jalankan perangkat lunak Gnina untuk memperoleh ligan dengan Koordinat X,Y dan Z
 6. Download PDB 2nnq di sini https://files.rcsb.org/download/2NNQ.pdb dan Pisahkan protein dan ligand dengan perintah di terminal linux satu persatu:
-**grep ATOM 2nnq.pdb > rec.pdb** selanjutnya
-**grep T4B 2nnq.pdb > lig.pdb**
+`grep ATOM 2nnq.pdb > rec.pdb` selanjutnya
+`grep T4B 2nnq.pdb > lig.pdb`
 7. Jalankan perintah berikut dalam satu baris terminal:
-**gnina -r rec.pdb -l contoh.pdb --autobox_ligand lig.pdb -o docked.sdf --seed 0**
+`gnina -r rec.pdb -l contoh.pdb --autobox_ligand lig.pdb -o docked.sdf --seed 0`
 8. Jalankan perintah berikut untuk merubah format file: 
-**obabel docked.sdf -O docked.pdbqt**
+`obabel docked.sdf -O docked.pdbqt*`
 9. Selanjutnya extract file tersebut menggunakan vina_split dengan perintah:
-**vina_split --input docked.pdbqt**
+`vina_split --input docked.pdbqt`
 10.	Selanjutnya nanti akan diperoleh file dengan nama docked_ligand_1.pdbqt selanjutnya ubah nama dan format file tersebut dengan format mol2 dengan perintah:
-**obabel docked_ligand_1.pdbqt -O 2nnq_lig_withH.mol2**
+`obabel docked_ligand_1.pdbqt -O 2nnq_lig_withH.mol2`
 11.	Buka file  2nnq_lig_withH.mol2 menggunakan Avogadro
 12.	Lakukan optimasi geometri dengan menggunakan Avogadro
 13.	Klik File, cari folder kerja, buka file 2nnq_lig_withH.mol2
@@ -132,8 +132,8 @@ Video Tutorial Dapat dilihat disini:
 
 **J. Analisis Footprint hasil minimisasi**
 1. Download file footprint.in https://github.com/purnawanpp/dock6_2nnq/blob/main/footprint.in dan plot.py https://github.com/purnawanpp/dock6_2nnq/blob/main/plot.py dan simpan di folder kerja
-2. Jalankan perintah berikut: **dock6 -i footprint.in**
-3. Selanjutnya jalankan perintah berikut: **python plot.py fps.min.output_footprint_scored.txt 50**
+2. Jalankan perintah berikut: `dock6 -i footprint.in`
+3. Selanjutnya jalankan perintah berikut: `python plot.py fps.min.output_footprint_scored.txt 50`
 4. Akan diperoleh file berupa file: https://github.com/purnawanpp/dock6_2nnq/blob/main/fps.min.output_footprint_scored.txt.pdf 
 5. Hasil akan berbeda jika menggunakan footprint hasil flexibledocking
 
