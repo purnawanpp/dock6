@@ -72,26 +72,26 @@ Video Tutorial Dapat dilihat disini:
 4.	Jika prosesnya berhasil, file baru dengan nama 2nnq.lig.min_scored.mol2.
 
 **E. Simulasi Rigid Docking**
-1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *rigid.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/rigid.in
+1.	Buka folder kerja, buatlah file baru dengan cara klik kanan menggunakan mouse lalu pilih Nex Text Document.txt edit nama file tersebut menjadi *rigid.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/rigid.in
 2.	Pada terminal ketikan perintah berikut: `dock6 -i rigid.in`
-3.	Setelah Simulasi Rigid Docking berhasil, file output baru yaitu rigid.out_scored.mol2 Visualisasikan file output ini menggunakan Chimera dengan mengikuti langkah-langkah untuk memeriksa keberhasilan proses docking
-4.	Klik File> open -> 2nnq_rec_withH.mol2 File 
-5.	Klik open -> 2nnq_lig_withH.mol2
-6.	Klik Tools -> Surface/binding Analysis -> ViewDock -> Pilih file  rigid.out_scored.mol2
+3.	Setelah perintah diatas maka Rigid Docking berhasil, file output baru yaitu rigid.out_scored.mol2 buka file output ini menggunakan Chimera dengan mengikuti langkah-langkah apakah proses yang dilakukan telah berhasil keberhasilan proses docking
+4.	Lakukan klik File> open -> 2nnq_rec_withH.mol2 File 
+5.	Klik bagian open -> 2nnq_lig_withH.mol2
+6.	Klik bagian Tools -> Surface/binding Analysis -> ViewDock -> Pilih file  rigid.out_scored.mol2
 7.	Pilih “Dock4,5 or 6” klik OK
-8.	Untuk mengatur tampilan dapat mengklik column>show>Pilih yang ingin ditampilkan
+8.	Visualisasi dengan tampilan menarik dapat dengan klik column>show>Pilih yang ingin ditampilkan
 
 **F.	Fixed Anchor Docking**
-1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *fixed.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/fixed.in
-2.	Pada terminal ketikan perintah berikut: `dock6 -i fixed.in`
-3.	Setelah docking selesai file output akan dihasilkan file berikut: 2nnq_fad_scored.mol2
-4.	Klik File> open -> 2nnq_rec_withH.mol2 File 
-5.	Klik open -> 2nnq_lig_withH.mol2
-6.	Klik Tools -> Surface/binding Analysis -> ViewDock -> Pilih file 2nnq_fad_scored.mol2
+1.	Buatlah file baru pada folder kerja dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *fixed.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/fixed.in
+2.	Pada terminal ubuntu ketikan perintah berikut: `dock6 -i fixed.in`
+3.	Proses penambatan (docking) selesai file output akan dihasilkan file berikut: 2nnq_fad_scored.mol2
+4.	Lakukan Klik bagian File> open -> 2nnq_rec_withH.mol2 File 
+5.	Klik bagian open -> 2nnq_lig_withH.mol2
+6.	Klik bagian Tools -> Surface/binding Analysis -> ViewDock -> Pilih file 2nnq_fad_scored.mol2
 7.	Pilih “Dock4,5 or 6” klik OK
-8.	Untuk mengatur tampilan dapat mengklik column>show>Pilih yang ingin ditampilkan
-9.	Perhatikan semua pose 50 yang dihasilkan berada di cluster yang sama dan RMSD standar adalah 0,649. Nilai RMSD yang bagus adalah <2. Ini menunjukkan bahwa docking telah berhasil
-10.	Nilai terbaik yaitu nilai yang paling minimal
+8.	Tampilan menarik dapat dipilih dengan mengklik column>show>Pilih yang ingin ditampilkan
+9.	Perhatikan semua bentuk (pose) 50 yang dihasilkan berada di cluster yang sama dan RMSD standar adalah 0,649. Nilai RMSD yang bagus adalah <2. Ini menunjukkan bahwa software docking mampu melakukan simulasi mirip dengan hasil kristalografi dan dikategorikan valid
+10.	Nilai terbaik dari hasil docking yaitu nilai yang paling minimal
 
 **G.	Flexible Docking dan perhitungan perhitungan Molecular Mechanics Generalized Born Surface Area (MM-GBSA)**
 1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *flex.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/flex.in
