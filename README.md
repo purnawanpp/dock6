@@ -41,26 +41,26 @@ Video Tutorial Dapat dilihat disini:
  
 # Part 2: Preparasi Input File dan Simulasi Docking
 **A.	Pembuatan receptor surface and spheres (Bola Receptor)**
-1.	Buka file 2nnq_rec_noH.mol2 menggunakan chimera
-2.	Klik Action -> Surface -> Show
-3.	Klik Tools -> Structure Editing -> Write DMS
-4.	Simpan dengan nama file: 2nnq_rec_noH.dms
+1.	Masuk ke folder kerja lalu Buka kembali file 2nnq_rec_noH.mol2 menggunakan perangkat lunak chimera
+2.	Tekan bagian Action -> Surface -> Show
+3.	Tekan Tools -> Structure Editing -> Write DMS
+4.	save dengan nama file: 2nnq_rec_noH.dms
 5.	Pastikan file 2nnq_rec_noH.dms ada dalam folder kerja
-6.	Buat File dengan Nama *INSPH* https://github.com/purnawanpp/dock6_2nnq/blob/main/INSPH
-7.	Buka terminal Ubuntu pastikan terminal ubuntu telah membaca directory anda. Ketik Perintah Berikut pada Terminal: 
+6.	Buatlah file dengan nama  *INSPH* file dapat dilihat disini https://github.com/purnawanpp/dock6_2nnq/blob/main/INSPH 
+7.	Buka terminal kembali, pastikan memilih Ubuntu pastikan cek kembali terminal agar membaca directory anda. Ketik Perintah Berikut pada Terminal: 
 `sphgen -i INSPH -o OUTSPH`
-9.	Jika terjadi eror baca pesan eror tersebut dan hapus file yang exist
-10.	Di sini selanjutnya akan dipilih spheres yang merupakan kantong pengikat ligan, kita akan mencoba mengarahkan ligan ke tempat pengikatan ke reseptor. Untuk memilih mengatur sphres tersebut ketik perintah berikut pada terminal:
+9.	Eror dapat terjadi, jangan panik, baca pesan eror tersebut dan hapus file yang sudah ada sebelumnya
+10.	Pemilihan spheres yang merupakan tempat ligan terikat (binding pocket), arahkan ligan ke tempat pengikatan ke reseptor. Untuk memilih mengatur sphres tersebut ketik perintah berikut pada terminal:
 `sphere_selector 2nnq_rec.sph 2nnq_lig_withH.mol2 10.0`
 
 **B.	Pembuatan Box**
-1.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *showbox.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/showbox.in
-2.	Arti script diatas adalah Kita akan membuat kotak dengan panjang persegi 8 Angstrom, Gunakan file selected_spheres di lokasi folder, nama file output pdb yang berisi kotak yang dihasilkan adalah 2nnq.box.pdb
+1.	Buatlah file berupa text document, klik kanan dulu, Nex Text Document.txt ubah nama file menjadi *showbox.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/showbox.in
+2.	showbox.in adalah merupakan script membuat kotak dengan panjang persegi dengan ukuran 8 Angstrom, Gunakan file selected_spheres di lokasi folder, nama file output pdb yang berisi kotak yang dihasilkan adalah 2nnq.box.pdb
 3.	Pada terminal ketikan perintah berikut: `showbox < showbox.in`
 4.	Jika langkah ini berhasil, Anda akan melihat file baru dengan nama 2nnq.box.pdb
 
 **C.	Pembuatan Grid**
-1.	Pastikan file flex.defn, flex_drive.tbl, dan vdw_AMBER_parm99.defn ada dalam folder kerja, file tersebut dapat didownload pada link berikut: https://github.com/purnawanpp/dock6_2nnq
+1.	Cek kembali file flex.defn, flex_drive.tbl, dan vdw_AMBER_parm99.defn ada dalam folder kerja, file tersebut dapat didownload pada link berikut: https://github.com/purnawanpp/dock6_2nnq
 2.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *grid.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/grid.in
 3.	Pada terminal ketikan perintah berikut: `grid -i grid.in -o gridinfo.out`
 4.	Jika perintah berhasil, tiga file baru akan dihasilkan seperti (gridinfo.out, grid.nrg, grid.bmp). Buka file gridinfo.out untuk memastikan semua informasi tentang reseptor dalam file sesuai dengan informasi asli dari reseptor. (Misalnya: Total muatan, residu dan muatannya) Jika informasi tidak cocok, itu berarti Anda telah melakukan kesalahan pada salah satu langkah yang Anda ikuti sejauh ini.
