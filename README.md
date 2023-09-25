@@ -62,12 +62,12 @@ Video Tutorial Dapat dilihat disini:
 **C.	Pembuatan Grid**
 1.	Cek kembali file flex.defn, flex_drive.tbl, dan vdw_AMBER_parm99.defn ada dalam folder kerja, file tersebut dapat didownload pada link berikut: https://github.com/purnawanpp/dock6_2nnq
 2.	Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *grid.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/grid.in
-3.	Pada terminal ketikan perintah berikut: `grid -i grid.in -o gridinfo.out`
-4.	Jika perintah berhasil, tiga file baru akan dihasilkan seperti (gridinfo.out, grid.nrg, grid.bmp). Buka file gridinfo.out untuk memastikan semua informasi tentang reseptor dalam file sesuai dengan informasi asli dari reseptor. (Misalnya: Total muatan, residu dan muatannya) Jika informasi tidak cocok, itu berarti Anda telah melakukan kesalahan pada salah satu langkah yang Anda ikuti sejauh ini.
+3.	Ketik perintah berikut pada terminal : `grid -i grid.in -o gridinfo.out`
+4.	Jika perintah berhasil, tiga file baru akan dibuat, yaitu gridinfo.out, grid.nrg, dan grid.bmp. Buka file gridinfo.out untuk memverifikasi bahwa semua informasi terkait reseptor dalam file tersebut sesuai dengan informasi asli dari reseptor (seperti total muatan, residu, dan muatan individu). Jika informasi tersebut tidak sesuai, itu menandakan bahwa Anda mungkin telah melakukan kesalahan dalam salah satu langkah yang telah Anda ikuti sejauh ini.
 
 **D.	Minimisasi Energi**
-1. Sebelum melakukan docking, ligan akan mengalami minimisasi energi untuk menghilangkan benturan atom yang tidak menguntungkan. Benturan ini akan mempengaruhi rigid docking karena pada rigid docking ligan akan ditambatkan sebagai ligan yang lengkap, sedangkan pada metode flexible docking dan fixed anchor docking ligan akan dipecah menjadi fragmen dan ligan akan dibangun perbagian dengan mempertimbangkan orientasi dan sudut putar.
-2. Buat file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *min.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/min.in
+1. Sebelum memulai proses docking, langkah awalnya adalah melakukan minimisasi energi pada ligan untuk mengatasi konflik atom yang tidak diinginkan. Konflik ini akan memengaruhi berbagai jenis docking, seperti rigid docking, di mana ligan tetap utuh, serta metode docking fleksibel dan docking dengan anchor tetap, di mana ligan akan dibagi menjadi fragmen dan dirakit dengan mempertimbangkan orientasi dan rotasi.
+2. Buatlah file baru dengan cara klik kanan lalu pilih Nex Text Document.txt ubah file tersebut menjadi *min.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/min.in
 3.	Pada terminal ketikan perintah berikut: `dock6 -i min.in`
 4.	Jika prosesnya berhasil, file baru dengan nama 2nnq.lig.min_scored.mol2.
 
