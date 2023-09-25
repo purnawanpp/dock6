@@ -7,35 +7,37 @@ Video Tutorial Dapat dilihat disini:
 
 # Part 1 Preparasi Receptor dan Ligand Menggunakan Chimera
 **A.	Preparasi Receptor**
-1.	Semua file hasil simulasi dan script dapat didownload pada link berikut: https://github.com/purnawanpp/dock6_2nnq
-2.	Baca artikel yang terkait dengan file Protein Data Bank (PDB) untuk memahami status protonasi, muatan, kondisi lingkungan, dan informasi penting lainnya mengenai reseptor dan ligan.
-3.	Buka file pdb menggunakan perangkat lunak chimera dan lihat strukturnya. Identifikasi komponen dari protein tersebut seperti reseptor, ligan, pelarut, surfaktan, dan ion logam
-4.	Buka file PDB (2NNQ.pdb) menggunakan Chimera
-5.	Pisahkan Ligand dan receptornya dengan select>residue >all non standard
-6.	Klik Actions>atom/Bonds>delete
-7.	Simpan reseptor sebagai 2nnq_receptor.pdb klik file>save pdb> Pilih lokasi selanjutnya save pdb.
-8.	Selanjutnya simpan lagi file, Simpan reseptor sebagai file mol2. Simpan dengan nama 2nnq_rec_noH.mol2
-9.	Klik File Close Session Buka kembali file 2nnq_rec_noH.mol2 menggunakan Chimera dan gunakan instruksi berikut untuk menyiapkan file reseptor yang akan digunakan di DOCK.
-10.	Klik Tools -> Structure Editing> Klik Dock Prep -> Secara otomatis akan ditambahkan Tambahkan H (Untuk menambahkan atom Hidrogen) dan muatan (Untuk menambahkan muatan, gunakan medan gaya AMBER terbaru untuk residu non standar
-11.	Pada Dock Prep Langsung klik “Ok” Selanjutnya 
-12.	Pada Add Hydrogen langsung klik “Ok”
-13.	Pilih sesuai pilihan diatas selanjutnya pada Assign Charges for Dock Prep Other Residue Pilih Gasteiger lalu centang Standard Residues, klik “OK”
-14.	Klik File Simpan sebagai file mol2. dengan nama (2nnq_rec_withH.mol2)
+1.	Semua hasil simulasi dan skrip dapat diunduh di tautan berikut: https://github.com/purnawanpp/dock6_2nnq
+2.	Silakan baca artikel yang terkait dengan file Protein Data Bank (PDB) untuk memahami informasi mengenai status protonasi, muatan, kondisi lingkungan, dan detail penting lainnya tentang reseptor dan ligan.
+3.	Gunakan perangkat lunak Chimera untuk membuka file PDB dan periksa strukturnya. Identifikasi komponen dari protein tersebut, seperti reseptor, ligan, pelarut, surfaktan, dan ion logam.
+4.	Buka file PDB (2NNQ.pdb) dengan menggunakan Chimera.
+5.	Pisahkan ligan dan reseptornya dengan memilih "select>residue>all non standard".
+6.	Klik "Actions>atom/Bonds>delete".
+7.	Simpan reseptor sebagai 2nnq_receptor.pdb dengan cara klik "file>save pdb" dan pilih lokasi untuk menyimpannya.
+8.	Selanjutnya, simpan kembali file sebagai file mol2. Simpan dengan nama 2nnq_rec_noH.mol2.
+9.	Tutup sesi file dengan mengklik "File Close Session". Kemudian, buka kembali file 2nnq_rec_noH.mol2 menggunakan Chimera dan ikuti petunjuk berikut untuk menyiapkan file reseptor yang akan digunakan dalam DOCK.
+10.	Klik "Tools -> Structure Editing" dan pilih "Dock Prep". Secara otomatis, atom hidrogen akan ditambahkan, dan muatan akan diberikan (gunakan medan gaya AMBER terbaru untuk residu non standar).
+11.	Klik "Ok" pada proses Dock Prep.
+12.	Klik "Ok" lagi pada proses Add Hydrogen.
+13.	Pilih opsi sesuai dengan yang dijelaskan di atas, lalu pada "Assign Charges for Dock Prep Other Residue," pilih Gasteiger dan centang "Standard Residues". Klik "OK".
+14.	Klik "File" dan simpan file sebagai file mol2 dengan nama (2nnq_rec_withH.mol2).
+
 
 **B.	Preparasi Ligand**
-1.	Buka lagi file 2nnq.pdb
-2.	Klik file > open 2nnq
-3.	Klik Select> Residue pilih residu T4B
-4.	Klik Select> Klik Invert (Selected models)
-5.	Klik Actions>atom/Bonds>delete
-6.	Klik Tools> Structure Editing >Klik Dock Prep
-7.	Klik Tools -> Structure Editing> Klik Dock Prep -> Secara otomatis akan ditambahkan Tambahkan H (Untuk menambahkan atom Hidrogen) dan muatan (Untuk menambahkan muatan, gunakan medan gaya AMBER terbaru untuk residu standar. Di tutorial kali ini menggunakan menggunakan General Amber Force Field (GAFF)
-8.	Pada Dock Prep Langsung klik “Ok” Selanjutnya 
-9.	Pada Add Hydrogen langsung klik “Ok”
-10.	Pada bagian label jangan dicentang
-11.	Pada bagian specipy net charge pilih -1 klik ok, pastikan charge method nya adalah Gastaiger
-12.	Simpan dengan format .mol2 dengan nama 2nnq_lig_withH.mol2 
-13.	Klik file close session
+1.	Buka kembali file 2nnq.pdb.
+2.	Pilih "file > open" dan buka file 2nnq.
+3.	Pilih "Select > Residue" dan pilih residu T4B.
+4.	Setelah itu, pilih "Select" dan klik "Invert (Selected models)".
+5.	Pilih "Actions > Atom/Bonds > Delete".
+6.	Navigasi ke "Tools > Structure Editing" dan klik "Dock Prep".
+7.	Di bawah "Tools > Structure Editing", pilih "Dock Prep". Ini akan secara otomatis menambahkan atom hidrogen dan muatan. Untuk menambahkan muatan, gunakan medan gaya AMBER terbaru untuk residu standar. Dalam tutorial ini, kami menggunakan General Amber Force Field (GAFF).
+8.	Dalam proses Dock Prep, cukup klik "Ok".
+9.	Dalam proses Add Hydrogen, langsung klik "Ok".
+10.	Jangan centang opsi pada bagian label.
+11.	Pada bagian "Specify Net Charge," pilih -1 dan klik "Ok". Pastikan metode muatan adalah Gasteiger.
+12.	Simpan file dengan format .mol2 dan beri nama 2nnq_lig_withH.mol2.
+13.	Terakhir, klik "File" dan pilih "Close Session".
+
  
 # Part 2: Preparasi Input File dan Simulasi Docking
 **A.	Pembuatan receptor surface and spheres (Bola Receptor)**
