@@ -1,11 +1,12 @@
-# Tutorial Simulasi Molecular Docking Menggunakan DOCK6 By Purnawan Pontana Putra
-Video Tutorial Dapat dilihat disini: 
+# Molecular Docking Simulation Tutorial Using DOCK6 By Purnawan Pontana Putra
+
+Video tutorial can be seen here:
 1. Part 1: https://youtu.be/m4ZI-UUwoyk
 2. Part 2: https://youtu.be/3y_uxZAhbqo
 3. Part 3: https://youtu.be/Eefni6cik04
 3. Part 4: https://youtu.be/-X_WOuCzRCs
 
-# Part 1 Preparasi Receptor dan Ligand Menggunakan Chimera
+# Part 1 Receptor and Ligand Preparation Using Chimera
 **A. Receptor Preparation**
 1. All simulation results and scripts can be downloaded at the following link: https://github.com/purnawanpp/dock6_2nnq
 2. Please read articles related to the Protein Data Bank (PDB) file to understand information about protonation status, charges, environmental conditions, and other important details about the receptor and ligand.
