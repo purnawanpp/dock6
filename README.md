@@ -73,7 +73,7 @@ Video tutorial can be seen here:
 4. If the process is successful, a new file with the name 2nnq.lig.min_scored.mol2.
 
 **E. Simulation Rigid Docking**
-1. Open the work folder, create a new file by right-clicking with the mouse then selecting Nex Text Document.txt, edit the file name to *rigid.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/rigid. in
+1. Open the work folder, create a new file by right-clicking with the mouse then selecting Nex Text Document.txt, edit the file name to *rigid.in* https://github.com/purnawanpp/dock6_2nnq/blob/main/rigid.in
 2. In the terminal type the following command: `dock6 -i rigid.in`
 3. After the command above, Rigid Docking is successful, the new output file is rigid.out_scored.mol2, open this output file using Chimera by following the steps to see whether the process carried out has been successful. The docking process was successful.
 4. Click File> open -> 2nnq_rec_withH.mol2 File
