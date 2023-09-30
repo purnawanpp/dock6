@@ -1,5 +1,9 @@
 # Molecular Docking Simulation Tutorial Using DOCK6 By Purnawan Pontana Putra
 
+# Reference
+1. Purnawan Pontana Putra. 2022. Molekular Docking Senyawa Biphenyl Azoles menggunakan DOCK6. CV Syamza
+2. https://ringo.ams.stonybrook.edu/index.php/2018_DOCK_tutorial_1_with_PDBID_2NNQ#VI._Virtual_Screen
+
 Video tutorial can be seen here:
 1. Part 1: https://youtu.be/m4ZI-UUwoyk
 2. Part 2: https://youtu.be/3y_uxZAhbqo
@@ -144,6 +148,3 @@ Video tutorial can be seen here:
 ## Notes
 This tutorial is suitable for the DOCK6.9 version, there are many updates to DOCK6.10, especially GBSA calculations which can only be done in a rigid state. An example of a GBSA calculation script on DOCK6.10 can be read here: https://github.com/purnawanpp/dock6_2nnq/blob/main/hawkins_gbsa1.dockin
 
-# Reference
-1. Purnawan Pontana Putra. 2022. Molekular Docking Senyawa Biphenyl Azoles menggunakan DOCK6. CV Syamza
-2. https://ringo.ams.stonybrook.edu/index.php/2018_DOCK_tutorial_1_with_PDBID_2NNQ#VI._Virtual_Screen
